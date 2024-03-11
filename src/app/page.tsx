@@ -1,16 +1,39 @@
 import { Header } from '@/components/header'
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 
-export default function Home() {
+import { GitHubLogoIcon, LinkedInLogoIcon } from '@radix-ui/react-icons'
+
+export default async function Home() {
   return (
-    <main>
+    <>
+      <h1 className="mb-8 text-4xl font-black">Alexandre Kumagae</h1>
       <Header />
-      <div className="mx-auto max-w-3xl py-32 text-center">
-        <h1 className="mb-8 text-4xl font-bold">Olá, sou o Alexandre 👋</h1>
-        <h2 className="text-xl">
-          Desenvolvedor Full Stack com mais de 10 anos de experiência, vivendo
-          na intersecção entre negócios e tecnologia.
-        </h2>
+      <div>
+        <p className="mb-5">Olá, sou o Alexandre 👋</p>
+        <p>
+          Desenvolvedor com mais de 10 anos de experiência. Ao longo deste
+          período, desenvolvi e liderei a criação de diversos tipos de projetos,
+          incluindo Sites, SaaS (Software como Serviço), E-commerce, Campanhas
+          de E-mail Marketing, Aplicações Web, Sistemas Web, APIs REST, MVPs
+          (Produtos Mínimos Viáveis), entre outros.
+        </p>
+        <div className="mt-5 flex justify-start gap-4">
+          <a
+            href="https://github.com/alexandrekumagae"
+            target="_blank"
+            className="transition-all duration-300 ease-out hover:opacity-50"
+          >
+            <GitHubLogoIcon height={24} width={24} />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/alexandrekumagae/"
+            target="_blank"
+            className="transition-all duration-300 ease-out hover:opacity-50"
+          >
+            <LinkedInLogoIcon height={24} width={24} />
+          </a>
+        </div>
       </div>
-    </main>
+    </>
   )
 }
