@@ -1,5 +1,4 @@
 import { Header } from '@/components/header'
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 
 import { GitHubLogoIcon, LinkedInLogoIcon } from '@radix-ui/react-icons'
 
