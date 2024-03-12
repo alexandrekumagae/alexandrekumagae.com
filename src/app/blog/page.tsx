@@ -1,31 +1,25 @@
-import { Header } from '@/components/header'
+import { Metadata } from 'next'
 
+import { getSortedPostsData } from '@/lib/markdown'
+
+import { PostProps } from '@/types/post'
+
+import { Header } from '@/components/header'
 import { Post } from '@/components/blog/post'
 
-interface PostProps {
-  id: string
-  title: string
-  slug: string
-  summary: string
-  published_date: string
+export const metadata: Metadata = {
+  title: 'Blog | Alexandre Kumagae',
+  description: 'Meus últimos posts.',
 }
 
-export default function Blog() {
-  const posts: PostProps[] = [
-    {
-      id: '1',
-      title: 'Dicas de carreira',
-      slug: 'dicas-de-carreira',
-      summary: 'Replicando o web app do caju.',
-      published_date: '19 de março de 2024',
-    },
-  ]
+export default async function Blog() {
+  const posts = await getSortedPostsData()
 
   return (
     <>
       <h1 className="mb-8 text-4xl font-black">Blog</h1>
       <Header />
-      <ul>
+      <ul className="flex flex-col gap-6">
         {posts.map((post: PostProps) => (
           <li key={post.id}>
             <Post post={post} />

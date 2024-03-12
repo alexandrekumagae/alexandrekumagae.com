@@ -12,14 +12,14 @@ export function Header() {
             Sobre
           </Link>
         </li>
-        <li>
+        {/* <li>
           <Link
             href="/projetos/"
             className="relative block px-2 transition hover:underline"
           >
             Projetos
           </Link>
-        </li>
+        </li> */}
         <li>
           <Link
             href="/blog/"
