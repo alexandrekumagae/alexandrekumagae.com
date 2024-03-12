@@ -25,7 +25,7 @@ export default function RootLayout({
           ' mx-auto mb-40 mt-8 flex max-w-2xl flex-col antialiased'
         }
       >
-        <main className="mt-6 flex min-w-0 flex-auto flex-col">
+        <main className="mt-6 flex min-w-0 flex-auto flex-col max-sm:px-6">
           <Header />
           {children}
         </main>
