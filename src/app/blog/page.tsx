@@ -4,7 +4,6 @@ import { getSortedPostsData } from '@/lib/markdown'
 
 import { PostProps } from '@/types/post'
 
-import { Header } from '@/components/header'
 import { Post } from '@/components/blog/post'
 
 export const metadata: Metadata = {
@@ -17,8 +16,7 @@ export default async function Blog() {
 
   return (
     <>
-      <h1 className="mb-8 text-4xl font-black">Blog</h1>
-      <Header />
+      <h1 className="mb-8 text-2xl font-medium tracking-tighter">blog</h1>
       <ul className="flex flex-col gap-6">
         {posts.map((post: PostProps) => (
           <li key={post.id}>

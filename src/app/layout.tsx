@@ -1,17 +1,15 @@
 import type { Metadata } from 'next'
 
-import { Footer } from '@/components/footer'
+import { Header } from '@/components/header'
 
-import { Inter } from 'next/font/google'
+import { GeistSans } from 'geist/font/sans'
 
 import './globals.css'
 
-const inter = Inter({ subsets: ['latin'] })
-
 export const metadata: Metadata = {
-  title: 'Alexandre Kumagae - Desenvolvedor',
+  title: 'Alexandre Kumagae - Desenvolvedor e Empreendedor',
   description:
-    'Olá, sou o Alexandre, um Desenvolvedor com mais de 11 anos de experiência, apaixonado pela interseção entre tecnologia e negócios.',
+    'Olá, sou o Alexandre, um Desenvolvedor com mais de 10 anos de experiência, apaixonado pela interseção entre tecnologia e negócios.',
 }
 
 export default function RootLayout({
@@ -21,11 +19,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt">
-      <body className={inter.className}>
-        <main className="mx-auto min-h-[80vh] max-w-2xl pt-20 max-sm:px-6">
+      <body
+        className={
+          GeistSans.className +
+          ' mx-auto mb-40 mt-8 flex max-w-2xl flex-col antialiased'
+        }
+      >
+        <main className="mt-6 flex min-w-0 flex-auto flex-col">
+          <Header />
           {children}
         </main>
-        <Footer />
       </body>
     </html>
   )

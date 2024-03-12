@@ -1,5 +1,5 @@
 import { Metadata } from 'next'
-import Image from 'next/image'
+// import Image from 'next/image'
 
 import { getPostData } from '@/lib/markdown'
 
@@ -30,23 +30,26 @@ export default async function BlogPost({ params }: { params: { id: string } }) {
 
   return (
     <article>
-      <h1 className="mb-8 text-4xl font-black">{post.title}</h1>
-      <div className="mb-6 flex justify-between">
-        <time className="text-[rgba(113,128,150)]">{post.date}</time>
-        <a href="/blog" className="text-[rgba(113,128,150)] underline">
-          ← Voltar para blog
+      <h1 className="title max-w-[650px] text-2xl font-medium tracking-tighter">
+        {post.title}
+      </h1>
+      <div className="mb-8 mt-2 flex max-w-[650px] items-center justify-between text-sm">
+        <time className="text-sm text-neutral-600">{post.date}</time>
+        <a href="/blog" className="text-neutral-600">
+          ← Voltar para o blog
         </a>
       </div>
-      <Image
+      {/* <Image
         src={`/img/posts/${post.image}`}
         alt={post.title}
         width={1000}
         height={1000}
         className="mx-auto max-h-[400px] w-auto"
-      />
+      /> */}
+      {/* // eslint-disable-next-line prettier/prettier */}
       <div
         dangerouslySetInnerHTML={{ __html: post.contentHtml }}
-        className="markdown"
+        className="prose-quoteless prose prose-neutral"
       />
     </article>
   )

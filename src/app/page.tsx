@@ -1,46 +1,85 @@
-import { Header } from '@/components/header'
-
-import { GitHubLogoIcon, LinkedInLogoIcon } from '@radix-ui/react-icons'
+import Image from 'next/image'
+import Link from 'next/link'
 
 export default async function Home() {
   return (
     <>
-      <h1 className="mb-8 text-4xl font-black">Alexandre Kumagae</h1>
-      <Header />
-      <div>
-        <p className="mb-5">Olá, sou o Alexandre 👋</p>
-        <p className="mb-4">
-          Desenvolvedor e Empreendedor com mais de 10 anos de experiência. Ao
-          longo de minha carreira, desenvolvi e liderei uma ampla gama de
-          projetos, incluindo Sites Institucionais, Portais de Conteúdo,
-          E-commerce, Aplicações Web, Sistemas Web e SaaS (Software como
-          Serviço).{' '}
+      <section>
+        <h1 className="mb-8 text-2xl font-medium tracking-tighter">
+          olá, sou o Alexandre 👋
+        </h1>
+        <p className="prose prose-neutral mb-8">
+          Sou um Desenvolvedor e Empreendedor com mais de{' '}
+          <strong>10 anos de carreira</strong>. Atualmente eu atuo como{' '}
+          <strong>Líder de Tecnologia e Sócio</strong> na{' '}
+          <Link href="https://movedigital.com.br" target="_blank">
+            Move Digital
+          </Link>
+          , onde sou o responsável pelas decisões tecnológicas e estratégicas da
+          empresa assim como a gestão da equipe.
         </p>
 
-        <p className="mb-2">
-          Adicionalmente, trabalhei em MVPs (Produtos Mínimos Viáveis) e também
-          participei na criação e no crescimento de diversas iniciativas
-          empreendedoras:
-        </p>
-        <ul className="mb-4 list-disc pl-4">
-          <li>
-            <strong>B4U: </strong>Uma startup que funcionava como um marketplace
-            de lançamentos imobiliários;
-          </li>
-          <li>
-            <strong>MoveMenu:</strong> um SaaS no ramo de alimentação;
-          </li>
-          <li>
-            <strong>DestravaMKT (https://destravamarketing.com.br):</strong> um
-            curso de marketing digital voltado a pequenos empresários;
-          </li>
-          <li>
-            <strong>Hospede Agora (https://hospedeagora.com.br):</strong> um
-            marketplace de turismo.
-          </li>
-        </ul>
+        <div className="my-8 columns-2 gap-4 sm:columns-3">
+          <div className="relative mb-4 h-40">
+            <Image
+              src="/img/events/evento-quero.jpg"
+              alt="Evento na Quero Educação"
+              height={500}
+              width={500}
+              className="h-full rounded-lg object-cover"
+            />
+          </div>
+          <div className="relative mb-4 h-40">
+            <Image
+              src="/img/events/evento-gdg.jpg"
+              alt="Evento no GDG SJC"
+              height={500}
+              width={500}
+              className="h-full rounded-lg object-cover"
+            />
+          </div>
+          <div className="relative mb-4 h-40">
+            <Image
+              src="/img/events/evento-softwillians.jpg"
+              alt="Evento na Softwillians"
+              height={500}
+              width={500}
+              className="h-full rounded-lg object-cover"
+            />
+          </div>
+        </div>
 
-        <p>
+        <p className="prose prose-neutral mb-8">
+          Além do desenvolvimento, minha paixão pelo empreendedorismo me levou a
+          mergulhar fundo em diversos projetos inovadores, incluindo:
+          <ul>
+            <li>
+              <strong>B4U:</strong> Uma startup que funcionava como um
+              marketplace de lançamentos imobiliários;
+            </li>
+            <li>
+              <strong>MoveMenu:</strong> um SaaS no ramo de alimentação;
+            </li>
+            <li>
+              <strong>
+                <Link href="https://destravamarketing.com.br" target="_blank">
+                  DestravaMKT:
+                </Link>
+              </strong>{' '}
+              um curso de marketing digital voltado a pequenos empresários;
+            </li>
+            <li>
+              <strong>
+                <Link href="https://hospedeagora.com.br" target="_blank">
+                  Hospede Agora:
+                </Link>
+              </strong>{' '}
+              um marketplace de turismo.
+            </li>
+          </ul>
+        </p>
+
+        <p className="prose prose-neutral mb-8">
           Essas experiências não só aprofundaram meu conhecimento técnico, mas
           também me deram uma sólida compreensão dos aspectos empresariais,
           proporcionando uma visão de negócios abrangente que se estende muito
@@ -49,23 +88,54 @@ export default async function Home() {
           um valor único a agregar aos projetos, equilibrando habilidades
           técnicas com insights estratégicos de negócios.
         </p>
-        <div className="mt-5 flex justify-start gap-4">
-          <a
-            href="https://www.linkedin.com/in/alexandrekumagae/"
-            target="_blank"
-            className="transition-all duration-300 ease-out hover:opacity-50"
-          >
-            <LinkedInLogoIcon height={24} width={24} />
-          </a>
-          <a
-            href="https://github.com/alexandrekumagae"
-            target="_blank"
-            className="transition-all duration-300 ease-out hover:opacity-50"
-          >
-            <GitHubLogoIcon height={24} width={24} />
-          </a>
-        </div>
-      </div>
+
+        <ul className="font-sm mt-8 flex flex-col space-x-0 space-y-2 text-neutral-600 dark:text-neutral-300 md:flex-row md:space-x-4 md:space-y-0">
+          <li>
+            <Link
+              className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
+              rel="noopener noreferrer"
+              target="_blank"
+              href="https://www.linkedin.com/in/alexandrekumagae/"
+            >
+              <svg
+                width="12"
+                height="12"
+                viewBox="0 0 12 12"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M2.07102 11.3494L0.963068 10.2415L9.2017 1.98864H2.83807L2.85227 0.454545H11.8438V9.46023H10.2955L10.3097 3.09659L2.07102 11.3494Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+              <p className="ml-2 h-7">linkedin</p>
+            </Link>
+          </li>
+          <li>
+            <a
+              className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
+              rel="noopener noreferrer"
+              target="_blank"
+              href="https://github.com/alexandrekumagae"
+            >
+              <svg
+                width="12"
+                height="12"
+                viewBox="0 0 12 12"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M2.07102 11.3494L0.963068 10.2415L9.2017 1.98864H2.83807L2.85227 0.454545H11.8438V9.46023H10.2955L10.3097 3.09659L2.07102 11.3494Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+              <p className="ml-2 h-7">github</p>
+            </a>
+          </li>
+        </ul>
+      </section>
     </>
   )
 }
