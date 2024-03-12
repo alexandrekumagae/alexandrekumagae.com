@@ -1,31 +1,27 @@
-import { Metadata, ResolvingMetadata } from 'next'
+import { Metadata } from 'next'
+import Image from 'next/image'
 
 import { getPostData } from '@/lib/markdown'
 
 import { PostProps } from '@/types/post'
-import Image from 'next/image'
 
-export async function getPost(id: string) {
+async function getPost(id: string) {
   const postData = await getPostData(id)
 
   return postData
 }
 
-export async function generateMetadata(
-  { params }: { params: { id: string } },
-  parent: ResolvingMetadata,
-): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: {
+  params: { id: string }
+}): Promise<Metadata> {
   const id = params.id
 
-  const post = await getPostData(id)
-
-  // const previousImages = (await parent).openGraph?.images || []
+  const post = await getPost(id)
 
   return {
     title: `${post.title} - Alexandre Kumagae`,
-    // openGraph: {
-    //   images: ['/some-specific-page-image.jpg', ...previousImages],
-    // },
   }
 }
 
