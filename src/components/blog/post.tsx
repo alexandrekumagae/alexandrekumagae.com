@@ -23,7 +23,7 @@ export function Post({ post }: PostItemProps) {
           Leia mais →
         </Link>
       </div>
-      <time className="text-sm text-neutral-600">{post.date}</time>
+      <time className="text-sm text-neutral-600">{post.formated_date}</time>
     </div>
   )
 }

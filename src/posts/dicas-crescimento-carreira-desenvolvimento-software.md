@@ -1,6 +1,7 @@
 ---
 title: "Dicas Essenciais para o Crescimento na Carreira de Desenvolvimento de Software"
-date: "7 de março de 2024"
+date: "07/03/2024"
+formated_date: "7 de março de 2024"
 summary: "Avance na carreira de desenvolvimento com estratégias eficazes: explore roadmaps, entenda descrições de vagas e aprimore sua lógica de programação. Guia ideal para evolução técnica."
 image: "dicas-crescimento-carreira-desenvolvimento-software.jpg"
 ---

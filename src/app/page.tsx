@@ -9,14 +9,22 @@ export default async function Home() {
           olá, sou o Alexandre 👋
         </h1>
         <p className="prose prose-neutral mb-8">
-          Sou um Desenvolvedor e Empreendedor com mais de{' '}
-          <strong>10 anos de carreira</strong>. Atualmente eu atuo como{' '}
-          <strong>Líder de Tecnologia e Sócio</strong> na{' '}
-          <Link href="https://movedigital.com.br" target="_blank">
-            Move Digital
-          </Link>
-          , onde sou o responsável pelas decisões tecnológicas e estratégicas da
-          empresa assim como a gestão da equipe.
+          Sou Líder de Tecnologia, Sócio e Desenvolvedor Full Stack na{' '}
+          <strong>
+            <a href="https://movedigital.com.br" target="_blank">
+              Move Digital
+            </a>
+          </strong>{' '}
+          🚀, uma empresa especializada no desenvolvimento de produtos digitais
+          com foco na usabilidade e experiência do usuário 👨‍🔧. Com mais de{' '}
+          <strong>10 anos</strong> de experiência em desenvolvimento web, domino
+          diversas tecnologias, como{' '}
+          <strong>
+            HTML, CSS, JavaScript, React.js, Node.js, MySQL, PHP e WordPress
+          </strong>
+          . Na Move Digital, lidero a equipe de desenvolvimento, gerencio
+          projetos e me relaciono com os stakeholders, contribuindo para o
+          crescimento e sucesso da empresa 📈.
         </p>
 
         <div className="my-8 columns-2 gap-4 sm:columns-3">
@@ -50,43 +58,17 @@ export default async function Home() {
         </div>
 
         <p className="prose prose-neutral mb-8">
-          Além do desenvolvimento, minha paixão pelo empreendedorismo me levou a
-          mergulhar fundo em diversos projetos inovadores, incluindo:
-          <ul>
-            <li>
-              <strong>B4U:</strong> Uma startup que funcionava como um
-              marketplace de lançamentos imobiliários;
-            </li>
-            <li>
-              <strong>MoveMenu:</strong> um SaaS no ramo de alimentação;
-            </li>
-            <li>
-              <strong>
-                <Link href="https://destravamarketing.com.br" target="_blank">
-                  DestravaMKT:
-                </Link>
-              </strong>{' '}
-              um curso de marketing digital voltado a pequenos empresários;
-            </li>
-            <li>
-              <strong>
-                <Link href="https://hospedeagora.com.br" target="_blank">
-                  Hospede Agora:
-                </Link>
-              </strong>{' '}
-              um marketplace de turismo.
-            </li>
-          </ul>
-        </p>
-
-        <p className="prose prose-neutral mb-8">
-          Essas experiências não só aprofundaram meu conhecimento técnico, mas
-          também me deram uma sólida compreensão dos aspectos empresariais,
-          proporcionando uma visão de negócios abrangente que se estende muito
-          além da programação. Compreendendo os dois lados da moeda, tanto a
-          perspectiva do cliente quanto a operacional da empresa, acredito ter
-          um valor único a agregar aos projetos, equilibrando habilidades
-          técnicas com insights estratégicos de negócios.
+          Minha paixão é empreender e inovar 💡, buscando criar soluções que
+          gerem valor para os nossos clientes e para a comunidade 🌐. Participei
+          da concepção e desenvolvimento de iniciativas como o{' '}
+          <strong>MoveMenu</strong>, uma plataforma SaaS para o setor
+          alimentício 🍲; <strong>a B4U</strong>, um marketplace de lançamentos
+          imobiliários 🏠; e <strong>o Hospede Agora</strong>, uma plataforma de
+          turismo que conecta viajantes e acomodações 🌍. Esses projetos me
+          desafiaram a aprimorar minhas habilidades em gestão, liderança,
+          comunicação e estratégia, além de expandir meu conhecimento do mundo
+          dos negócios 📊. Meu objetivo é continuar aprendendo, compartilhando e
+          criando soluções digitais que façam a diferença ✨.
         </p>
 
         <ul className="font-sm mt-8 flex flex-col space-x-0 space-y-2 text-neutral-600 dark:text-neutral-300 md:flex-row md:space-x-4 md:space-y-0">

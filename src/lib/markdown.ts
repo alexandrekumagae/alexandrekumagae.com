@@ -8,6 +8,7 @@ import externalLinks from 'rehype-external-links'
 import stringify from 'rehype-stringify'
 
 import { PostProps } from '../types/post'
+import { title } from 'process'
 
 const postsDirectory = path.join(process.cwd(), 'src', 'posts')
 
@@ -38,6 +39,7 @@ export async function getSortedPostsData(): Promise<PostProps[]> {
         id,
         title: matterResult.data.title,
         date: matterResult.data.date,
+        formated_date: matterResult.data.formated_date,
         summary: matterResult.data.summary,
         image: matterResult.data.image,
         contentHtml,
@@ -48,7 +50,7 @@ export async function getSortedPostsData(): Promise<PostProps[]> {
   )
 
   // Retorne os posts ordenados por data de forma decrescente
-  return allPostsData.sort((a, b) => (a.date < b.date ? -1 : 1))
+  return allPostsData.sort((a, b) => (a.date > b.date ? -1 : 1))
 }
 
 export async function getPostData(id: string) {
@@ -73,6 +75,7 @@ export async function getPostData(id: string) {
     contentHtml,
     ...(matterResult.data as {
       date: string
+      formated_date: string
       title: string
       summary: string
       image: string

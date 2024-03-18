@@ -1,6 +1,7 @@
 ---
 title: "Como Melhorar a Pontualidade nas Calls com MeetingBar para Mac"
-date: "11 de março de 2024"
+date: "11/03/2024"
+formated_date: "11 de março de 2024"
 summary: "Melhore sua pontualidade com MeetingBar, a ferramenta de Mac para gerenciamento eficiente de calls. Entrada automática em reuniões e sincronização de calendários para maior produtividade."
 image: "melhorar-pontualidade-calls-meetingbar-mac.jpg"
 ---
