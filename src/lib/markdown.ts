@@ -8,7 +8,6 @@ import externalLinks from 'rehype-external-links'
 import stringify from 'rehype-stringify'
 
 import { PostProps } from '../types/post'
-import { title } from 'process'
 
 const postsDirectory = path.join(process.cwd(), 'src', 'posts')
 
